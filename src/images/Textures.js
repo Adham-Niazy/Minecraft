@@ -8,12 +8,12 @@ import {
   logImg,
 } from './images';
 
-const dirtTexture = new TextureLoader(dirtImg);
-const grassTexture = new TextureLoader(grassImg);
-const groundTexture = new TextureLoader(grassImg);
-const glassTexture = new TextureLoader(glassImg);
-const woodTexture = new TextureLoader(woodImg);
-const logTexture = new TextureLoader(logImg);
+const dirtTexture = new TextureLoader().load(dirtImg);
+const grassTexture = new TextureLoader().load(grassImg);
+const groundTexture = new TextureLoader().load(grassImg);
+const glassTexture = new TextureLoader().load(glassImg);
+const woodTexture = new TextureLoader().load(woodImg);
+const logTexture = new TextureLoader().load(logImg);
 
 export {
   dirtTexture,
