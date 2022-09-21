@@ -8,7 +8,7 @@ const JUMP_FORCE = 5;
 const MOVEMENT_SPEED = 5;
 
 const Player = () => {
-  const { jump, moveBackward, moveForward, moveRight, moveLeft } = useKeyboard();
+  const { jump, moveBackward, moveForward, moveRight, moveLeft, shift } = useKeyboard();
   const { camera } = useThree()
   const [ref, api] = useSphere(() => ({
     mass: 1,
@@ -46,7 +46,7 @@ const Player = () => {
     Direction
       .subVectors(frontVector, sideVector)
       .normalize()
-      .multiplyScalar(MOVEMENT_SPEED)
+      .multiplyScalar(MOVEMENT_SPEED + (shift ? 5 : 0))
       .applyEuler(camera.rotation)
     api.velocity.set(Direction.x, velocity.current[1], Direction.z)
 
