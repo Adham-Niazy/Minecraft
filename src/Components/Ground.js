@@ -4,8 +4,8 @@ import { groundTexture } from '../images/Textures'
 
 export const Ground = () => {
   const [ref] = usePlane(() => ({
-    rotation: [-Math.PI / 4,0,0],
-    position: [0,0,0]
+    rotation: [-Math.PI / 2, 0, 0],
+    position: [0, 0, 0]
   }))
   const groundSize = [100, 100];
 
@@ -18,7 +18,9 @@ export const Ground = () => {
   return (
     <mesh ref={ref}>
       <planeBufferGeometry attach="geometry" args={groundSize} />
-      <meshStandardMaterial attach="material" map={groundTexture}/>
+      <meshStandardMaterial attach="material" map={groundTexture} />
     </mesh>
   )
 }
+
+export default Ground;
