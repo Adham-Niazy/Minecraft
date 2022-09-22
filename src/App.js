@@ -2,7 +2,7 @@ import { Physics } from '@react-three/cannon';
 import { Sky } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
-import { Ground, Player, FPV, Cubes, TextureSelector } from './Components';
+import { Ground, Player, FPV, Cubes, TextureSelector, Menu } from './Components';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       </Canvas>
       <div className="absolute centered cursor">+</div>
       <TextureSelector />
+      <Menu />
     </>
   );
 }
