@@ -53,3 +53,18 @@ body {
 .cursor {
   color: red;
 }
+
+.texture-selector {
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  width: 30%;
+}
+.texture-selector img {
+  width: 20%;
+  border: 4px solid transparent;
+}
+
+.texture-selector img.active {
+  border: 4px solid red;
+}
