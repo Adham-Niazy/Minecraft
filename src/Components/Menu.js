@@ -5,10 +5,16 @@ const Menu = () => {
 
   return (<div className="menu absolute">
     <button
-      onClick={() => saveWorld()}
+      onClick={(e) => {
+        e.stopPropagation()
+        saveWorld()
+      }}
     >Save</button>
     <button
-      onClick={() => resetWorld()}
+      onClick={(e) => {
+        e.stopPropagation()
+        resetWorld()
+      }}
     >Reset</button>
   </div>)
 }
