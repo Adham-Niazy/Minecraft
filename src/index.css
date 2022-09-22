@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 * {
   box-sizing: border-box;
 }
-
 html,
 body,
 #root {
@@ -18,7 +18,6 @@ body,
   user-select: none;
   overflow: hidden;
 }
-
 body {
   position: fixed;
   overflow: hidden;
@@ -27,33 +26,26 @@ body {
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   font-size: 40px;
 }
-
 .flex {
   display: flex;
 }
-
 .fixed {
   position: fixed;
 }
-
 .relative {
   position: relative;
 }
-
 .absolute {
   position: absolute;
 }
-
 .centered {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .cursor {
   color: red;
 }
-
 .texture-selector {
   bottom: 1rem;
   right: 1rem;
@@ -64,11 +56,9 @@ body {
   width: 20%;
   border: 4px solid transparent;
 }
-
 .texture-selector img.active {
   border: 4px solid red;
 }
-
 .menu {
   top: 0px;
   left: 20px;
@@ -77,4 +67,49 @@ body {
   padding: 7px 25px;
   margin-right: 10px;
   border: 3px solid;
+  font-family: "Silkscreen", cursive;
+}
+.controls {
+  font-family: "Silkscreen", cursive;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: antiquewhite;
+  top: 1rem;
+  right: 1rem;
+  border: 3px solid black;
+  font-size: 16px;
+  overflow: hidden;
+}
+.controls .control {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem 20px;
+}
+.controls .control p {
+  margin: 0;
+}
+.controls h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+.hint {
+  font-size: small;
+  margin: 2rem 2rem 20px;
+  color: red;
+}
+.controls .toggle {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.controls.fixed-height {
+  height: 4.2rem !important;
+}
+.rotate {
+  top: 1.5rem !important;
+  transform: rotate(-180deg);
 }
